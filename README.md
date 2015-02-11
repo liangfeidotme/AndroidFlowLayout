@@ -4,11 +4,16 @@ A flow layout for Android
 samples
 ----
 
-* **portrait**
+![]("http://img02.taobaocdn.com/imgextra/i2/160310864/TB2MH8.bVXXXXa3XXXXXXXXXXXX_!!160310864.png")
 
-<img src="http://img01.taobaocdn.com/imgextra/i1/160310864/TB2QexSbVXXXXbQXpXXXXXXXXXX_!!160310864.png" style="width: 200px;" />
+usage
+----
 
-* **landscape**
-
-<img src="http://img02.taobaocdn.com/imgextra/i2/160310864/TB2MH8.bVXXXXa3XXXXXXXXXXXX_!!160310864.png" style="width: 200px;" />
-
+```java
+<com.liangfeizc.flowlayout.FlowLayout
+    android:id="@+id/flow_layout"
+    flowlayout:vertical_spacing="10dp"
+    flowlayout:horizontal_spacing="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+```
