@@ -7,10 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 /**
- * Created by liangfei on 2/10/15.
- */
-
-/**
  * Inspired by
  * http://hzqtc.github.io/2013/12/android-custom-layout-flowlayout.html
  */

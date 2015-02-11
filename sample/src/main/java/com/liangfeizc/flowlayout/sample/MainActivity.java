@@ -1,15 +1,14 @@
 package com.liangfeizc.flowlayout.sample;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
-
+import android.support.v7.app.ActionBarActivity;
 import com.liangfeizc.flowlayout.FlowLayout;
 
 
-public class MainActivity extends Activity {
+public class MainActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
