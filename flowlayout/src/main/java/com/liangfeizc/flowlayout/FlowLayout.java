@@ -11,9 +11,13 @@ import android.view.ViewGroup;
  * http://hzqtc.github.io/2013/12/android-custom-layout-flowlayout.html
  */
 public class FlowLayout extends ViewGroup {
+
+    private static final int DEFAULT_HORIZONTAL_SPACING = 5;
+    private static final int DEFAULT_VERTICAL_SPACING = 5;
+
     private int mVerticalSpacing;
     private int mHorizontalSpacing;
-
+    
     public FlowLayout(Context context) {
         super(context);
     }
@@ -23,8 +27,8 @@ public class FlowLayout extends ViewGroup {
 
         TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.FlowLayout);
         try {
-            mHorizontalSpacing = a.getDimensionPixelSize(R.styleable.FlowLayout_horizontal_spacing, 5);
-            mVerticalSpacing = a.getDimensionPixelSize(R.styleable.FlowLayout_vertical_spacing, 5);
+            mHorizontalSpacing = a.getDimensionPixelSize(R.styleable.FlowLayout_horizontal_spacing, DEFAULT_HORIZONTAL_SPACING);
+            mVerticalSpacing = a.getDimensionPixelSize(R.styleable.FlowLayout_vertical_spacing, DEFAULT_VERTICAL_SPACING);
         } finally {
             a.recycle();
         }
