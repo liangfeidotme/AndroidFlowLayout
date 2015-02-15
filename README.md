@@ -10,27 +10,21 @@ samples
 dependencies
 ----
 
-* gralde
-
-```groovy
-compile(group: 'com.liangfeizc', name: 'flowlayout', version: '1.0.0', ext: 'aar')
-```
-
-or
+### gralde
 
 ```groovy
 compile 'com.liangfeizc:flowlayout:1.0.0@aar'
 ```
 
-* maven
+### maven
 
 ```xml
-    <dependency>
-        <groupId>com.liangfeizc</groupId>
-        <artifactId>flowlayout</artifactId>
-        <version>1.0.0</version>
-        <type>aar</type>
-    </dependency>
+<dependency>
+    <groupId>com.liangfeizc</groupId>
+    <artifactId>flowlayout</artifactId>
+    <version>1.0.0</version>
+    <type>aar</type>
+</dependency>
 ```
 
 usage
