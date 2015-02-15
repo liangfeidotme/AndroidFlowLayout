@@ -16,6 +16,12 @@ dependencies
 compile(group: 'com.liangfeizc', name: 'flowlayout', version: '1.0.0', ext: 'aar')
 ```
 
+or
+
+```groovy
+compile 'com.liangfeizc:flowlayout:1.0.0@aar'
+```
+
 * maven
 
 ```xml
