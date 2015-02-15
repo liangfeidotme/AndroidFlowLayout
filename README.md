@@ -6,6 +6,24 @@ samples
 
 ![](http://img02.taobaocdn.com/imgextra/i2/160310864/TB2MH8.bVXXXXa3XXXXXXXXXXXX_!!160310864.png)
 
+
+dependencies
+----
+
+* gralde
+
+    compile(group: 'com.liangfeizc', name: 'flowlayout', version: '1.0.0', ext: 'aar')
+
+* maven
+
+    <dependency>
+        <groupId>com.liangfeizc</groupId>
+        <artifactId>flowlayout</artifactId>
+        <version>1.0.0</version>
+        <type>aar</type>
+    </dependency>
+
+
 usage
 ----
 
