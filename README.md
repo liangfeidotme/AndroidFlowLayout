@@ -38,3 +38,8 @@ usage
     android:layout_width="match_parent"
     android:layout_height="wrap_content" />
 ```
+
+tips
+---
+
+If you min sdk version is smaller than 16, you can add `<uses-sdk tools:overrideLibrary="com.liangfeizc.flowlayout" />` to your AndroidManifest.xml.
