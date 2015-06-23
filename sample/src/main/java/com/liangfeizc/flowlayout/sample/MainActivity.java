@@ -18,7 +18,6 @@ public class MainActivity extends ActionBarActivity {
         addChildTo(((FlowLayout) findViewById(R.id.flow_layout)));
     }
 
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -41,10 +40,18 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    private static final String[] BUTTON_TITLES = new String[] {
+            "Acid Green", "Aero", "Aero Blue", "African Violet", "Air Force Blue (RAF)",
+            "Bulgarian Rose", "Cyan Cornflower Blue", "Dark Terra Cotta", "Donkey Brown",
+            "Fuchsia", "Fluorescent Yellow", "Flame", "Fandango", "Electric Yellow", "Eerie Black"
+    };
+
     private void addChildTo(FlowLayout flowLayout) {
-        for (int i = 0; i < 20; i++) {
-            Button btn = new Button(this);
-            btn.setText("button: " + i);
+        for (int i = 0; i < BUTTON_TITLES.length; i++) {
+            Button btn = new CheckableButton(this);
+            btn.setTextColor(getResources().getColorStateList(R.color.checkable_text_color));
+            btn.setBackgroundResource(R.drawable.checkable_background);
+            btn.setText(BUTTON_TITLES[i]);
             flowLayout.addView(btn);
         }
     }

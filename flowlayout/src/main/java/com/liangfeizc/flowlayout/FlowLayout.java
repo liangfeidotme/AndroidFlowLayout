@@ -7,8 +7,12 @@ import android.view.View;
 import android.view.ViewGroup;
 
 /**
- * Inspired by
- * http://hzqtc.github.io/2013/12/android-custom-layout-flowlayout.html
+ * FlowLayout is much more like a {@link android.widget.LinearLayout}, but it can automatically
+ * separate the widgets wrapped in it into multiple lines just like the water flow.
+ *
+ * Inspired by {@see http://hzqtc.github.io/2013/12/android-custom-layout-flowlayout.html}
+ *
+ * @author liangfeizc
  */
 public class FlowLayout extends ViewGroup {
 
@@ -27,8 +31,10 @@ public class FlowLayout extends ViewGroup {
 
         TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.FlowLayout);
         try {
-            mHorizontalSpacing = a.getDimensionPixelSize(R.styleable.FlowLayout_horizontal_spacing, DEFAULT_HORIZONTAL_SPACING);
-            mVerticalSpacing = a.getDimensionPixelSize(R.styleable.FlowLayout_vertical_spacing, DEFAULT_VERTICAL_SPACING);
+            mHorizontalSpacing = a.getDimensionPixelSize(
+                    R.styleable.FlowLayout_horizontal_spacing, DEFAULT_HORIZONTAL_SPACING);
+            mVerticalSpacing = a.getDimensionPixelSize(
+                    R.styleable.FlowLayout_vertical_spacing, DEFAULT_VERTICAL_SPACING);
         } finally {
             a.recycle();
         }
