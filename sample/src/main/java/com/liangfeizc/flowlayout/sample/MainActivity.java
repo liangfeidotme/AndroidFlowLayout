@@ -40,19 +40,20 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    private static final String[] BUTTON_TITLES = new String[] {
-            "Acid Green", "Aero", "Aero Blue", "African Violet", "Air Force Blue (RAF)",
-            "Bulgarian Rose", "Cyan Cornflower Blue", "Dark Terra Cotta", "Donkey Brown",
-            "Fuchsia", "Fluorescent Yellow", "Flame", "Fandango", "Electric Yellow", "Eerie Black"
-    };
-
     private void addChildTo(FlowLayout flowLayout) {
-        for (int i = 0; i < BUTTON_TITLES.length; i++) {
+        for (int i = 'A'; i < 'Z'; i++) {
             Button btn = new CheckableButton(this);
+            btn.setHeight(dp2px(32));
+            btn.setWidth(dp2px(88));
+            btn.setTextSize(16);
             btn.setTextColor(getResources().getColorStateList(R.color.checkable_text_color));
             btn.setBackgroundResource(R.drawable.checkable_background);
-            btn.setText(BUTTON_TITLES[i]);
+            btn.setText(String.valueOf((char)i));
             flowLayout.addView(btn);
         }
+    }
+
+    public int dp2px(int dpValue) {
+        return (int) (dpValue * getResources().getDisplayMetrics().density);
     }
 }

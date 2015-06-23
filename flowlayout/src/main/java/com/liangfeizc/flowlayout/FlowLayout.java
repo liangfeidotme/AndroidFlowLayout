@@ -12,7 +12,7 @@ import android.view.ViewGroup;
  *
  * Inspired by {@see http://hzqtc.github.io/2013/12/android-custom-layout-flowlayout.html}
  *
- * @author liangfeizc
+ * @author liangfeizc {@see http://www.liangfeizc.com}
  */
 public class FlowLayout extends ViewGroup {
 

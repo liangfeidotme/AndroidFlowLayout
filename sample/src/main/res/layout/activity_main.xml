@@ -11,8 +11,14 @@
 
     <com.liangfeizc.flowlayout.FlowLayout
         android:id="@+id/flow_layout"
+        android:background="@android:color/darker_gray"
         flowlayout:vertical_spacing="10dp"
         flowlayout:horizontal_spacing="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <SeekBar
+        android:max="10"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 </RelativeLayout>
