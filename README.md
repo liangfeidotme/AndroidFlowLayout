@@ -4,9 +4,9 @@ A flow layout for Android
 samples
 ----
 
-![](screenshot.png?raw=true "sample screenshot")
+# ![](screenshot.png?raw=true "sample screenshot")
 
-<img src="screenshot.png?raw=true" style="width:100px" />
+<img src="screenshot.png?raw=true" style="width:50%;" />
 
 
 dependencies
