@@ -6,6 +6,8 @@ samples
 
 ![](screenshot.png?raw=true "sample screenshot")
 
+<img src="screenshot.png?raw=true" style="width:100px" />
+
 
 dependencies
 ----
