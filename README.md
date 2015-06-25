@@ -4,7 +4,7 @@ A flow layout for Android
 samples
 ----
 
-![](http://img02.taobaocdn.com/imgextra/i2/160310864/TB2MH8.bVXXXXa3XXXXXXXXXXXX_!!160310864.png)
+![](screenshot.png?raw=true "sample screenshot")
 
 
 dependencies

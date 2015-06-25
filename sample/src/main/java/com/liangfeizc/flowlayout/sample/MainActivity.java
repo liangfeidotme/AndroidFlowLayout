@@ -44,11 +44,14 @@ public class MainActivity extends ActionBarActivity {
         for (int i = 'A'; i < 'Z'; i++) {
             Button btn = new CheckableButton(this);
             btn.setHeight(dp2px(32));
-            btn.setWidth(dp2px(88));
             btn.setTextSize(16);
             btn.setTextColor(getResources().getColorStateList(R.color.checkable_text_color));
             btn.setBackgroundResource(R.drawable.checkable_background);
-            btn.setText(String.valueOf((char)i));
+            StringBuilder sb = new StringBuilder();
+            for (int j = 0; j < i - 'A' + 4; j++) {
+                sb.append((char) i);
+            }
+            btn.setText(sb.toString());
             flowLayout.addView(btn);
         }
     }
