@@ -68,10 +68,11 @@ public class FlowLayout extends ViewGroup {
         // if there's enough room for it, otherwise, wrap the line and put the child to next line.
         for (int i = 0, childCount = getChildCount(); i < childCount; ++i) {
             View childView = getChildAt(i);
-            LayoutParams childLayoutParams = childView.getLayoutParams();
-            childView.measure(
-                    getChildMeasureSpec(widthMeasureSpec, paddingLeft + paddingRight, childLayoutParams.width),
-                    getChildMeasureSpec(heightMeasureSpec, paddingTop + paddingBottom, childLayoutParams.height));
+//            LayoutParams childLayoutParams = childView.getLayoutParams();
+//            childView.measure(
+//                    getChildMeasureSpec(widthMeasureSpec, paddingLeft + paddingRight, childLayoutParams.width),
+//                    getChildMeasureSpec(heightMeasureSpec, paddingTop + paddingBottom, childLayoutParams.height));
+            measureChild(childView,widthMeasureSpec,heightMeasureSpec);
             int childWidth = childView.getMeasuredWidth();
             int childHeight = childView.getMeasuredHeight();
 
