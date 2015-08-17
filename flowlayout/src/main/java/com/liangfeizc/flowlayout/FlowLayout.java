@@ -49,7 +49,6 @@ public class FlowLayout extends ViewGroup {
         mVerticalSpacing = pixelSize;
     }
 
-
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         int myWidth = resolveSize(0, widthMeasureSpec);
@@ -67,13 +66,11 @@ public class FlowLayout extends ViewGroup {
         // Measure each child and put the child to the right of previous child
         // if there's enough room for it, otherwise, wrap the line and put the child to next line.
         for (int i = 0, childCount = getChildCount(); i < childCount; ++i) {
-            View childView = getChildAt(i);
-            LayoutParams childLayoutParams = childView.getLayoutParams();
-            childView.measure(
-                    getChildMeasureSpec(widthMeasureSpec, paddingLeft + paddingRight, childLayoutParams.width),
-                    getChildMeasureSpec(heightMeasureSpec, paddingTop + paddingBottom, childLayoutParams.height));
-            int childWidth = childView.getMeasuredWidth();
-            int childHeight = childView.getMeasuredHeight();
+            View child = getChildAt(i);
+            measureChild(child, widthMeasureSpec, heightMeasureSpec);
+
+            int childWidth = child.getMeasuredWidth();
+            int childHeight = child.getMeasuredHeight();
 
             lineHeight = Math.max(childHeight, lineHeight);
 
@@ -87,6 +84,7 @@ public class FlowLayout extends ViewGroup {
         }
 
         int wantedHeight = childTop + lineHeight + paddingBottom;
+
         setMeasuredDimension(myWidth, resolveSize(wantedHeight, heightMeasureSpec));
     }
 
